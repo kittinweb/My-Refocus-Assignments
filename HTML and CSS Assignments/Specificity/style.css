@@ -1,0 +1,25 @@
+*{
+    color: aquamarine;
+}
+
+.blue {
+    color: blue;
+}
+
+.red{
+    color: red;
+}
+
+/* Following the specificity rule, below are the codes to override the existing styles */
+
+#box-1 .blue {
+    color: purple;
+}
+
+#box-2 p {
+    color: pink;
+}
+
+:root p {
+    color: gray;
+}

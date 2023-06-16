@@ -1,0 +1,48 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 20px;
+}
+
+.child {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+
+.text-content {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    font-family: Arial;
+}
+
+p {
+    margin-left: 8px;
+    font-size: 21px;
+    line-height: 20px;
+}
+
+.img1 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    background-image: url('jaxx1.jpg');
+    background-size: contain;
+}
+
+.img2 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+    background-image: url('jaxx2.jpg');
+    background-size: contain;
+}
+
+.img3 {
+    grid-row: 2/3;
+    grid-column: 3/5;
+    background-image: url('jaxxfam.jpg');
+    background-size: contain;
+}

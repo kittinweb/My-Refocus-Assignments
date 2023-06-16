@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #4EF6AE;
+    font-family: 'Roboto', sans-serif;
+}
+
+figure img {
+    width: 100%;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 105px;
+}
+
+.banner {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 30px;
+    height: 180px;
+    width: 70%;
+    padding: 30px 60px;
+}
+
+.banner-text {
+    border-left: 10px solid #525453;
+    padding: 0px 0px 9px 10px;
+}
+
+.squircle {
+    width: 200px;
+    border-radius: 100px 100px;
+    padding: 10px 0px;
+    text-align: center;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr1fr;
+}
+
+.banner-text {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.cta-container {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+/* Below is the CSS code for the new component as requested in the assignment instructions */
+
+.banner-container2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+}
+
+.banner2 {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 30px;
+    height: 250px;
+    width: 50%;
+    padding: 30px 60px;
+}
+
+.logo-img {
+    width: 110px;
+    height: 110px;
+    padding: 0px 35px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px 25px 0px;
+}
+
+.banner-text2 {
+    display: flex;
+    text-align: justify;
+    padding: 0px 13px 0px 13px;
+}

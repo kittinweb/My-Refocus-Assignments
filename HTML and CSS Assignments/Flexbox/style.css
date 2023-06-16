@@ -1,0 +1,33 @@
+/* CSS for the Easy Part */
+.parent-aqua, .parent-bisque, .parent-blueviolet  {
+    display: flex;
+}
+
+.parent-aqua {
+    justify-content: center;
+}
+
+.parent-bisque {
+    justify-content: center;
+    align-items: center;
+}
+
+.parent-blueviolet {
+    justify-content: end;
+}
+
+
+/* CSS for the Difficult Part */
+.parent-box {
+    border-radius: 5px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top, .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+

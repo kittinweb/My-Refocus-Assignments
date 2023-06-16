@@ -1,0 +1,26 @@
+/*as per instructions, I used a display:none property to hide the other elements on different screen sizes*/
+.mobile, .tablet, .pc {
+    display: none;
+}
+
+/*breakpoint for mobile*/
+@media only screen and (min-width: 0px) and (max-width: 688px) {
+    .mobile {
+        display:block;
+    }
+
+}
+
+/*breakpoint for tablet*/
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .tablet {
+        display:block;
+    }
+}
+
+/*breakpoint for pc*/
+@media only screen and (min-width: 993px) {
+    .pc {
+        display:block;
+    }
+}

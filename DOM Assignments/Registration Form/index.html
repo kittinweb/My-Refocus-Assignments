@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vaccination Registration Form</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="form-container">
+
+      <div class="heading">
+        <h2>Vaccination Registration Form</h2>
+      </div>
+
+      <form id="registrationForm">
+        <div class="field-group">
+          <label for="firstName" class="sublabel">First Name:</label>
+          <input type="text" class="inputFields" id="firstName">
+          <div id="firstNameError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="middleName" class="sublabel">Middle Name:</label>
+          <input type="text" class="inputFields" id="middleName">
+          <div id="middleNameError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="lastName" class="sublabel">Last Name:</label>
+          <input type="text" class="inputFields" id="lastName">
+          <div id="lastNameError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="birthday" class="sublabel">Birthday:</label>
+          <input type="date" class="inputFields" id="birthday">
+          <div id="birthdayError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="email" class="sublabel">Email:</label>
+          <input type="email" class="inputFields" id="email">
+          <div id="emailError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="region" class="sublabel">Region:</label>
+          <select class="inputFields" id="region">
+            <option value="" disabled selected>Select Region</option>
+            <option value="Region I Ilocos Region">Region I - Ilocos Region</option>
+            <option value="Region II Cagayan Valley">Region II - Cagayan Valley</option>
+            <option value="Region III Central Luzon">Region III - Central Luzon</option>
+            <option value="Region IV-A CALABARZON">Region IV-A - CALABARZON</option>
+            <option value="MIMAROPA Region">MIMAROPA Region</option>
+            <option value="Region V Bicol Region">Region V Bicol Region</option>
+            <option value="Region VI Western Visayas">Region VI - Western Visayas</option>
+            <option value="Region VII Central Visayas">Region VII - Central Visayas</option>
+            <option value="Region VIII Eastern Visayas">Region VIII - Eastern Visayas</option>
+            <option value="Region IX Zamboanga Peninsula">Region IX - Zamboanga Peninsula</option>
+            <option value="Region X Northern Mindanao">Region X - Northern Mindanao</option>
+            <option value="Region XI Davao Region">Region XI - Davao Region</option>
+            <option value="Region XII SOCCSKSARGEN">Region XII - SOCCSKSARGEN</option>
+            <option value="Region XIII Caraga">Region XIII - Caraga</option>
+            <option value="NCR National Capital Region">NCR - National Capital Region</option>
+            <option value="CAR Cordillera Administrative Region">CAR - Cordillera Administrative Region</option>
+            <option value="BARMM Bangsamoro Autonomous Region in Muslim Mindanao">BARMM - Bangsamoro Autonomous Region in Muslim Mindanao</option>
+          </select>
+          <div id="regionError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="province" class="sublabel">Province:</label>
+          <input type="text" class="inputFields" id="province">
+          <div id="provinceError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="barangay" class="sublabel">Barangay:</label>
+          <input type="text" class="inputFields" id="barangay">
+          <div id="barangayError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="street" class="sublabel">Street:</label>
+          <input type="text" class="inputFields" id="street">
+          <div id="streetError" class="error"></div>
+        </div>
+
+        <div class="radiofield-group">
+          <label class="sublabel">Gender:</label><br>
+          <div class="radioGroup">
+            <div>
+              <input type="radio" class="radioinputFields" id="male" name="gender" value="Male">
+              <label for="male">Male</label><br>
+            </div>
+            <div>
+              <input type="radio" class="radioinputFields" id="female" name="gender" value="Female">
+              <label for="female">Female</label><br>
+            </div>
+            <div>
+              <input type="radio" class="radioinputFields" id="other" name="gender" value="Other">
+              <label for="other">Other</label><br>
+            </div>
+          </div>
+          <div id="genderError" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="vaccineDose1" class="sublabel">Vaccination Brand (Dose 1):</label>
+          <select class="inputFields" id="vaccineDose1">
+            <option value="" disabled selected>Select Brand</option>
+            <option value="Pfizer BioNTech">Pfizer BioNTech</option>
+            <option value="AstraZeneca">AstraZeneca</option>
+            <option value="Coronavac">Coronavac</option>
+            <option value="Sputnik V">Sputnik V</option>
+            <option value="Janssen">Janssen</option>
+            <option value="Covaxin">Covaxin</option>
+            <option value="Moderna">Moderna</option>
+            <option value="Sinopharm">Sinopharm</option>
+            <option value="Covovax">Covovax</option>
+          </select>
+          <div id="vaccineDose1Error" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="dateDose1" class="sublabel">Date of Vaccination (Dose 1):</label>
+          <input type="date" class="inputFields" id="dateDose1">
+          <div id="dateDose1Error" class="error"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="siteDose1" class="sublabel">Vaccination (Dose 1) Site:</label>
+          <input type="text" class="inputFields" id="siteDose1">
+          <div id="siteDose1Error" class="error"></div>
+        </div>
+
+        <div class="radiofield-group">
+          <label class="sublabel">Did you already get your second vaccination?</label><br>
+          <div class="radioGroup">
+            <div>
+              <input type="radio" class="radioinputFields" id="yes" name="secondDose" value="Yes">
+              <label for="yes">Yes</label><br>
+            </div>
+            <div>
+              <input type="radio" class="radioinputFields" id="no" name="secondDose" value="No">
+              <label for="no">No</label>
+            </div>
+          </div>
+          <div id="secondDoseError" class="error"></div>
+        </div>
+
+        <div class="secondDoseQuestions" style="display: none;">
+          <div class="field-group">
+            <label for="vaccineDose2" class="sublabel">Vaccination Brand (Dose 2):</label>
+            <select id="vaccineDose2" class="inputFields brandDose2" disabled>
+              <option value="" disabled selected>Select Brand</option>
+              <option value="Pfizer BioNTech">Pfizer BioNTech</option>
+              <option value="AstraZeneca">AstraZeneca</option>
+              <option value="Coronavac">Coronavac</option>
+              <option value="Sputnik V">Sputnik V</option>
+              <option value="Janssen">Janssen</option>
+              <option value="Covaxin">Covaxin</option>
+              <option value="Moderna">Moderna</option>
+              <option value="Sinopharm">Sinopharm</option>
+              <option value="Covovax">Covovax</option>
+            </select>
+            <div id="vaccineDose2Error" class="error"></div>
+          </div>
+
+          <div class="field-group">
+            <label for="dateDose2" class="sublabel">Date of Vaccination (Dose 2):</label>
+            <input type="date" id="dateDose2" class="inputFields dateDose2" disabled>
+            <div id="dateDose2Error" class="error"></div>
+          </div>
+
+          <div class="field-group">
+            <label for="siteDose2" class="sublabel">Vaccination (Dose 2) Site:</label>
+            <input type="text" id="siteDose2" class="inputFields siteDose2" disabled>
+            <div id="siteDose2Error" class="error"></div>
+          </div>
+        </div>
+
+        <div class="buttonfield-group">
+          <button type="button" onclick="clearForm()">Clear</button>
+          <button type="button" onclick="submitForm()">Submit</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <script>
+    function clearForm() {
+      document.getElementById('registrationForm').reset();
+
+      const errorElements = document.getElementsByClassName('error');
+      for (let i = 0; i < errorElements.length; i++) {
+        errorElements[i].innerText = '';
+      }
+
+      const inputElements = document.getElementsByClassName('inputFields');
+      for (let i = 0; i < inputElements.length; i++) {
+        inputElements[i].classList.remove('highlight');
+      }
+
+      const secondDoseQuestionsDiv = document.querySelector('.secondDoseQuestions');
+      secondDoseQuestionsDiv.style.display = 'none';
+    }
+
+    function submitForm() {
+      const errorElements = document.getElementsByClassName('error');
+      const inputElements = document.getElementsByClassName('inputFields');
+      for (let i = 0; i < errorElements.length; i++) {
+        errorElements[i].innerText = '';
+      }
+      for (let i = 0; i < inputElements.length; i++) {
+        inputElements[i].classList.remove('highlight');
+      }
+
+      const firstName = document.getElementById('firstName').value.trim();
+      const middleName = document.getElementById('middleName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const birthday = document.getElementById('birthday').value;
+      const email = document.getElementById('email').value.trim();
+      const region = document.getElementById('region').value;
+      const province = document.getElementById('province').value.trim();
+      const barangay = document.getElementById('barangay').value.trim();
+      const street = document.getElementById('street').value.trim();
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const vaccineDose1 = document.getElementById('vaccineDose1').value;
+      const dateDose1 = document.getElementById('dateDose1').value;
+      const siteDose1 = document.getElementById('siteDose1').value;
+      const secondDose = document.querySelector('input[name="secondDose"]:checked');
+      const vaccineDose2 = document.querySelector('.brandDose2').value;
+      const dateDose2 = document.querySelector('.dateDose2').value;
+      const siteDose2 = document.querySelector('.siteDose2').value;
+
+      let isValid = true;
+
+      if (firstName === '') {
+        document.getElementById('firstNameError').innerText = 'Please enter your first name.';
+        document.getElementById('firstName').classList.add('highlight');
+        isValid = false;
+      } 
+
+      if (middleName === '') {
+        document.getElementById('middleNameError').innerText = 'Please enter your middle name.';
+        document.getElementById('middleName').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (lastName === '') {
+        document.getElementById('lastNameError').innerText = 'Please enter your last name.';
+        document.getElementById('lastName').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (birthday === '') {
+        document.getElementById('birthdayError').innerText = 'Please select your birth date.';
+        document.getElementById('birthday').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (email === '') {
+        document.getElementById('emailError').innerText = 'Please enter your email. (email@example.com)';
+        document.getElementById('email').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (region === '') {
+        document.getElementById('regionError').innerText = 'Please select your region.';
+        document.getElementById('region').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (province === '') {
+        document.getElementById('provinceError').innerText = 'Please enter your province.';
+        document.getElementById('province').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (barangay === '') {
+        document.getElementById('barangayError').innerText = 'Please enter your barangay.';
+        document.getElementById('barangay').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (street === '') {
+        document.getElementById('streetError').innerText = 'Please enter your street.';
+        document.getElementById('street').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (!gender) {
+        document.getElementById('genderError').innerText = 'Please select your gender.';
+        isValid = false;
+      }
+
+      if (vaccineDose1 === '') {
+        document.getElementById('vaccineDose1Error').innerText = 'Please select the vaccine brand for dose 1.';
+        document.getElementById('vaccineDose1').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (dateDose1 === '') {
+        document.getElementById('dateDose1Error').innerText = 'Please select the date of vaccination for dose 1.';
+        document.getElementById('dateDose1').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (siteDose1 === '') {
+        document.getElementById('siteDose1Error').innerText = 'Please enter the vaccination site for dose 1.';
+        document.getElementById('siteDose1').classList.add('highlight');
+        isValid = false;
+      }
+
+      if (!secondDose) {
+        document.getElementById('secondDoseError').innerText = 'Please select your answer.';
+        isValid = false;
+      }
+
+      if (secondDose && secondDose.value === 'Yes') {
+        if (vaccineDose2 === '') {
+          document.getElementById('vaccineDose2Error').innerText = 'Please select the vaccine brand for dose 2.';
+          document.getElementById('vaccineDose2').classList.add('highlight');
+          isValid = false;
+        }
+
+        if (dateDose2 === '') {
+          document.getElementById('dateDose2Error').innerText = 'Please select the date of vaccination for dose 2.';
+          document.getElementById('dateDose2').classList.add('highlight');
+          isValid = false;
+        }
+
+        if (siteDose2 === '') {
+          document.getElementById('siteDose2Error').innerText = 'Please enter the vaccination site for dose 2.';
+          document.getElementById('siteDose2').classList.add('highlight');
+          isValid = false;
+        }
+      }
+
+      document.getElementById('firstName').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('middleName').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('lastName').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('birthday').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('email').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('region').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('province').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('barangay').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('street').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('vaccineDose1').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('dateDose1').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('siteDose1').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('vaccineDose2').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('dateDose2').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+      document.getElementById('siteDose2').addEventListener('input', function() {
+        this.classList.remove('highlight');
+      });
+
+      if (isValid) {
+        let message = `First Name: ${firstName}\nMiddle Name: ${middleName}\nLast Name: ${lastName}\nBirthday: ${birthday}\nEmail: ${email}\nRegion: ${region}\nProvince: ${province}\nBarangay: ${barangay}\nStreet: ${street}\nGender: ${gender.value}\nVaccine Brand (Dose 1): ${vaccineDose1}\nDate of Vaccination (Dose 1): ${dateDose1}\nVaccination (Dose 1) Site: ${siteDose1}\nDid you already get your second vaccination? ${secondDose.value}`;
+
+        if (secondDose.value === 'Yes') {
+          message += `\nVaccine Brand (Dose 2): ${vaccineDose2}\nDate of Vaccination (Dose 2): ${dateDose2}\nVaccination (Dose 2) Site: ${siteDose2}`;
+        }
+
+        alert(message);
+      }
+    }
+
+    document.getElementById('firstName').addEventListener('input', function () {
+      document.getElementById('firstNameError').innerText = '';
+    });
+    document.getElementById('middleName').addEventListener('input', function () {
+      document.getElementById('middleNameError').innerText = '';
+    });
+    document.getElementById('lastName').addEventListener('input', function () {
+      document.getElementById('lastNameError').innerText = '';
+    });
+    document.getElementById('birthday').addEventListener('input', function () {
+      document.getElementById('birthdayError').innerText = '';
+    });
+    document.getElementById('email').addEventListener('input', function () {
+      document.getElementById('emailError').innerText = '';
+    });
+    document.getElementById('region').addEventListener('input', function () {
+      document.getElementById('regionError').innerText = '';
+    });
+    document.getElementById('province').addEventListener('input', function () {
+      document.getElementById('provinceError').innerText = '';
+    });
+    document.getElementById('barangay').addEventListener('input', function () {
+      document.getElementById('barangayError').innerText = '';
+    });
+    document.getElementById('street').addEventListener('input', function () {
+      document.getElementById('streetError').innerText = '';
+    });
+    const genderInputs = document.querySelectorAll('input[name="gender"]');
+    for (let i = 0; i < genderInputs.length; i++) {
+      genderInputs[i].addEventListener('input', function () {
+        document.getElementById('genderError').innerText = '';
+      });
+    }
+    document.getElementById('vaccineDose1').addEventListener('input', function () {
+      document.getElementById('vaccineDose1Error').innerText = '';
+    });
+    document.getElementById('dateDose1').addEventListener('input', function () {
+      document.getElementById('dateDose1Error').innerText = '';
+    });
+    document.getElementById('siteDose1').addEventListener('input', function () {
+      document.getElementById('siteDose1Error').innerText = '';
+    });
+    const secondDoseInputs = document.querySelectorAll('input[name="secondDose"]');
+    for (let i = 0; i < secondDoseInputs.length; i++) {
+      secondDoseInputs[i].addEventListener('input', function () {
+        document.getElementById('secondDoseError').innerText = '';
+      });
+    }
+    document.querySelector('.brandDose2').addEventListener('input', function () {
+      document.getElementById('vaccineDose2Error').innerText = '';
+    });
+    document.querySelector('.dateDose2').addEventListener('input', function () {
+      document.getElementById('dateDose2Error').innerText = '';
+    });
+    document.querySelector('.siteDose2').addEventListener('input', function () {
+      document.getElementById('siteDose2Error').innerText = '';
+    });
+
+    const secondDoseRadios = document.querySelectorAll('input[name="secondDose"]');
+    const secondDoseQuestions = document.querySelector('.secondDoseQuestions');
+
+    secondDoseRadios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        if (this.value === 'Yes') {
+          secondDoseQuestions.style.display = 'block';
+          enableSecondDoseQuestions();
+        } else {
+          secondDoseQuestions.style.display = 'none';
+          disableSecondDoseQuestions();
+        }
+      });
+    });
+
+    function enableSecondDoseQuestions() {
+      document.querySelector('.brandDose2').disabled = false;
+      document.querySelector('.dateDose2').disabled = false;
+      document.querySelector('.siteDose2').disabled = false;
+    }
+
+    function disableSecondDoseQuestions() {
+      document.querySelector('.brandDose2').disabled = true;
+      document.querySelector('.dateDose2').disabled = true;
+      document.querySelector('.siteDose2').disabled = true;
+    }
+
+  </script>
+</body>
+
+</html>

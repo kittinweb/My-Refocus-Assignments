@@ -1,0 +1,21 @@
+* {
+    /* I created a font property for my output to look slightly like the provided design*/
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lorem-content {
+    border: solid 1px gray;
+    padding: 16px;
+    height: 400px;
+    width: 400px;
+}
+
+h1 {
+    margin: 10px 5px;
+    padding: 10px 12px 11px 13px;
+}
+
+p {
+    padding: 6px 0px;
+    margin: 0px 16px;
+}

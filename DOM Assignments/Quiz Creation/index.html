@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+</head>
+<body>
+  <h1>Simple Quiz</h1>
+
+  <form name="quiz" id="quizForm">
+
+    <div>
+      <label for="capital">Question 1: What is the capital of the Philippines?</label><br>
+      <input type="text" id="capital" name="question1">
+      <div id="resultQuestion-1"></div>
+    </div>
+
+    <br><br>
+
+    <div>
+      <label>Question 2: What is the value of x in this equation? x = 3 + 2*5</label><br>
+      <input type="radio" id="x1" name="question2" value="25">
+      <label for="x1">x = 25</label><br>
+      <input type="radio" id="x2" name="question2" value="13">
+      <label for="x2">x = 13</label><br>
+      <input type="radio" id="x3" name="question2" value="18">
+      <label for="x3">x = 28</label>
+      <div id="resultQuestion-2"></div>
+    </div>
+
+    <br><br>
+
+    <div>
+      <label>Question 3: Which of the following birds can fly? Choose 3 correct answers.</label><br>
+      <input type="checkbox" id="bird1" name="question3" value="parrot">
+      <label for="bird1">parrot</label><br>
+      <input type="checkbox" id="bird2" name="question3" value="eagle">
+      <label for="bird2">eagle</label><br>
+      <input type="checkbox" id="bird3" name="question3" value="penguin">
+      <label for="bird3">penguin</label><br>
+      <input type="checkbox" id="bird4" name="question3" value="crow">
+      <label for="bird4">crow</label>
+      <div id="resultQuestion-3"></div>
+    </div>
+    
+    <br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+
+  <script type="text/javascript">
+    const form = document.forms.quiz;
+
+    form.addEventListener('submit', function(event){
+      event.preventDefault();
+      checkQuestion1();
+      checkQuestion2();
+      checkQuestion3();
+    })
+
+    form.addEventListener('reset', function(event){
+      event.preventDefault();
+      form.question1.value = "";
+      form.question2.forEach(radio => (radio.checked = false));
+      form.question3.forEach(checkbox => (checkbox.checked = false));
+      document.getElementById('resultQuestion-1').innerText = "";
+      document.getElementById('resultQuestion-2').innerText = "";
+      document.getElementById('resultQuestion-3').innerText = "";
+    })
+
+    function checkQuestion1(){
+      const answer = form.question1.value.trim().toLowerCase();
+      const result = document.getElementById('resultQuestion-1');
+      
+      if (answer === "") {
+        result.innerText = "You must enter an answer.";
+        result.style.color = "red";
+      } else if (answer === "manila") {
+        result.innerText = "Question 1 answer is correct!";
+        result.style.color = "green";
+      } else {
+        result.innerText = "Question 1 answer is incorrect!";
+        result.style.color = "red";
+      }
+    }
+
+    function checkQuestion2(){
+      const options = form.question2;
+      const result = document.getElementById('resultQuestion-2');
+      let selectedOption = false;
+
+      for (let i = 0; i < options.length; i++) {
+        if (options[i].checked) {
+          selectedOption = true;
+          if (options[i].value === "13") {
+            result.innerText = "Question 2 answer is correct!";
+            result.style.color = "green";
+          } else {
+            result.innerText = "Question 2 answer is incorrect!";
+            result.style.color = "red";
+          }
+          break;
+        }
+      }
+
+      if (!selectedOption) {
+        result.innerText = "You must enter an answer.";
+        result.style.color = "red";
+      }
+    }
+
+    function checkQuestion3(){
+      const checkboxes = form.question3;
+      const result = document.getElementById('resultQuestion-3');
+      const checkedValues = [];
+
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          checkedValues.push(checkboxes[i].value);
+        }
+      }
+
+      if (checkedValues.length === 0) {
+        result.innerText = "You must enter an answer.";
+        result.style.color = "red";
+      } else if (checkedValues.length === 3 && checkedValues.includes("parrot") && checkedValues.includes("eagle") && checkedValues.includes("crow")) {
+        result.innerText = "Question 3 answer is correct!";
+        result.style.color = "green";
+      } else {
+        result.innerText = "Question 3 answer is incorrect!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
