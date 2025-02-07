@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Hello there! My name is Kristina N. Tamayao-Calica, but you can call me Kitt. I've been married to my best friend for three years now, but our relationship goes back a total of 14 years. We live in Mabalacat City, Pampanga, and share our cozy 2-bedroom apartment with our adorable 10-month-old Boston Terrier named Jaxx. Fun fact: Jaxx and I share the same birthdate, August 11. After working in customer service for nine years, I decided to pursue my passion for web development, encouraged by my husband and my background in Information Technology.
+Hello there! My name is Kristina N. Tamayao-Calica, but you can call me Kitt. I've been married to my best friend for three years now, but our relationship goes back a total of 15 years. We live in Mabalacat City, Pampanga, and share our cozy 2-bedroom apartment with our adorable 2-year-old Boston Terrier named Jaxx. Fun fact: Jaxx and I share the same birthdate, August 11. After working in customer service for over 9 years, I decided to pursue my passion for web development, encouraged by my husband and my background in Information Technology.
 
 ## Hobbies
 
